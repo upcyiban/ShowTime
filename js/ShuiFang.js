@@ -1,3 +1,4 @@
+
 /**
  * Created by zet on 2016/2/16.
  */
@@ -12,17 +13,17 @@ $(document).ready(function() {
             for(var i=0;i<this.length;i++)
                 this[i+1]=initArray.arguments[i] }
         var d=new initArray(
-            "æ˜ŸæœŸæ—¥",
-            "æ˜ŸæœŸä¸€",
-            "æ˜ŸæœŸäºŒ",
-            "æ˜ŸæœŸä¸‰",
-            "æ˜ŸæœŸå››",
-            "æ˜ŸæœŸäº”",
-            "æ˜ŸæœŸå…­");
-        theday =  [today.getMonth()+1]+"æœˆ"+today.getDate()+"æ—¥"+"&nbsp&nbsp&nbsp" + d[today.getDay()+1]+"&nbsp&nbsp";
+            "ÐÇÆÚÈÕ",
+            "ÐÇÆÚÒ»",
+            "ÐÇÆÚ¶þ",
+            "ÐÇÆÚÈý",
+            "ÐÇÆÚËÄ",
+            "ÐÇÆÚÎå",
+            "ÐÇÆÚÁù");
+        theday =  [today.getMonth()+1]+"ÔÂ"+today.getDate()+"ÈÕ"+"&nbsp&nbsp&nbsp" + d[today.getDay()+1]+"&nbsp&nbsp";
         intHours = today.getHours();
         intMinutes = today.getMinutes();
-            hours = intHours+":";
+        hours = intHours+":";
         if (intMinutes < 10) {
             minutes = "0"+intMinutes;
         } else {
@@ -30,11 +31,11 @@ $(document).ready(function() {
         }
         if(intHours<=21)
         {
-            state="å¼€æ”¾ä¸­"
+            state="¿ª·ÅÖÐ"
         }
         else
         {
-            state="å·²å…³é—­"
+            state="ÒÑ¹Ø±Õ"
         }
         timeString = theday+hours+minutes;
         Clock.innerHTML = timeString;
