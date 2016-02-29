@@ -4,44 +4,49 @@
  */
 $(document).ready(function() {
     function tick() {
-        var hours, minutes, seconds, xfile;
+        var hours, minutes, seconds,dd;
         var intHours, intMinutes, intSeconds;
-        var today, theday,state;
+        var today, theday,state1,state2,state3;
         today = new Date();
         function initArray(){
             this.length=initArray.arguments.length
             for(var i=0;i<this.length;i++)
                 this[i+1]=initArray.arguments[i] }
         var d=new initArray(
-            "ÐÇÆÚÈÕ",
-            "ÐÇÆÚÒ»",
-            "ÐÇÆÚ¶þ",
-            "ÐÇÆÚÈý",
-            "ÐÇÆÚËÄ",
-            "ÐÇÆÚÎå",
-            "ÐÇÆÚÁù");
-        theday =  [today.getMonth()+1]+"ÔÂ"+today.getDate()+"ÈÕ"+"&nbsp&nbsp&nbsp" + d[today.getDay()+1]+"&nbsp&nbsp";
+            "æ˜ŸæœŸæ—¥",
+            "æ˜ŸæœŸä¸€",
+            "æ˜ŸæœŸäºŒ",
+            "æ˜ŸæœŸä¸‰",
+            "æ˜ŸæœŸå››",
+            "æ˜ŸæœŸäº”",
+            "æ˜ŸæœŸå…­");
+        theday =  [today.getMonth()+1]+"æœˆ"+today.getDate()+"æ—¥"+"&nbsp&nbsp&nbsp" + d[today.getDay()+1]+"&nbsp&nbsp";
         intHours = today.getHours();
         intMinutes = today.getMinutes();
         hours = intHours+":";
+        dd = today.getDay();
         if (intMinutes < 10) {
             minutes = "0"+intMinutes;
         } else {
             minutes = intMinutes;
         }
-        if(intHours<=21)
+        if(intHours<=21&&dd!=4)
         {
-            state="¿ª·ÅÖÐ"
+            state1="å¼€æ”¾ä¸­";
+            state2="å¼€æ”¾ä¸­";
+            state3="å¼€æ”¾ä¸­";
         }
         else
         {
-            state="ÒÑ¹Ø±Õ"
+            state1="æœªå¼€æ”¾";
+            state2="æœªå¼€æ”¾";
+            state3="æœªå¼€æ”¾"
         }
         timeString = theday+hours+minutes;
         Clock.innerHTML = timeString;
-        yulan.innerHTML = state;
-        huicui.innerHTML = state;
-        tangdao.innerHTML = state;
+        yulan.innerHTML = state1;
+        huicui.innerHTML = state2;
+        tangdao.innerHTML = state3;
         window.setTimeout("tick();", 100);
     }
     window.onload = tick;
