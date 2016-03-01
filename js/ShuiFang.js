@@ -6,7 +6,7 @@ $(document).ready(function() {
     function tick() {
         var hours, minutes, seconds,dd;
         var intHours, intMinutes, intSeconds;
-        var today, theday,state1,state2,state3;
+        var today, theday,state1,state2,state3,computerstate;
         today = new Date();
         function initArray(){
             this.length=initArray.arguments.length
@@ -42,6 +42,24 @@ $(document).ready(function() {
             state2="未开放";
             state3="未开放"
         }
+        if(intHours<=12&&intHours>=8)
+        {
+            computerstate="开放中";
+
+        }
+        if (intHours>=14&&intHours<=22)
+        {
+            computerstate="开放中";
+
+        }
+        else
+        {
+            computerstate="未开放";
+
+        }
+
+
+        computer.innerHTML = computerstate;
         timeString = theday+hours+minutes;
         Clock.innerHTML = timeString;
         yulan.innerHTML = state1;
