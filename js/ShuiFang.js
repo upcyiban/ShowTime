@@ -45,6 +45,7 @@ $(document).ready(function() {
             state3="未开放"
         }
         //timeString = theday+hours+minutes+seconds;
+        //computer
         if(intHours<=12&&intHours>=8)
         {
             computerstate="开放中";
@@ -60,9 +61,29 @@ $(document).ready(function() {
             computerstate="未开放";
 
         }
+        //library
+        if(intHours<=12&&intHours>=8)
+        {
+            library0state="开放中";
+
+        }
+        if (intHours>=14&&intHours<=22)
+        {
+            library0state="开放中";
+
+        }
+        else
+        {
+            library1state="未开放";
+
+        }
 
 
         computer.innerHTML = computerstate;
+        library0.innerHTML = library0state;
+        library1.innerHTML = library1state;
+        library2.innerHTML = library2state;
+        library3.innerHTML = library3state;
         timeString = theday+hours+minutes;
         Clock.innerHTML = timeString;
         yulan.innerHTML = state1;
