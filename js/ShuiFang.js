@@ -51,7 +51,7 @@ $(document).ready(function() {
             computerstate="开放中";
 
         }
-        if (intHours>=14&&intHours<=22)
+        else if (intHours>=14&&intHours<=22)
         {
             computerstate="开放中";
 
@@ -62,20 +62,87 @@ $(document).ready(function() {
 
         }
         //library
-        if(intHours<=12&&intHours>=8)
+        //library0
+        if(intHours>=8)
         {
-            library0state="开放中";
-
+            if (intHours==8)
+            {
+                if(intMinutes>=30)
+                {
+                    library0state="开放中";
+                }
+                else
+                {
+                    library0state="未开放";
+                }
+            }
+            else if (intHours<22)
+            {
+                library0state="开放中";
+            }
+            else if(intHours==22)
+            {
+                if (intMinutes>=30)
+                {
+                    library0state="未开放";
+                }
+                else
+                {
+                    library0state="开放中";
+                }
+            }
+            else
+            {
+                library0state="未开放";
+            }
         }
-        if (intHours>=14&&intHours<=22)
+        //library1
+        if(intHours<=22&&intHours>=8)
         {
-            library0state="开放中";
+            library1state="开放中";
 
         }
         else
         {
             library1state="未开放";
 
+        }
+        //library2、3
+        if(intHours<=12&&intHours>=8)
+        {
+            library2state="开放中";
+            library3state="开放中";
+        }
+        else if (intHours>=14)
+        {
+            if(intHours<17)
+            {
+                library2state="开放中";
+                library3state="开放中";
+            }
+            else if (intHours==17)
+            {
+                if(intMinutes>=30)
+                {
+                    library2state="未开放";
+                    library3state="未开放";
+                }
+                else
+                {
+                    library2state="开放中";
+                    library3state="开放中";
+                }
+            }
+        }
+        else if (intHours>=19&&intHours<=22)
+        {
+            library2state="开放中";
+            library3state="开放中";
+        }
+        else
+        {
+            library2state="未开放";
+            library3state="未开放";
         }
 
 
