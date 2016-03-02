@@ -1,8 +1,7 @@
-
 /**
  * Created by zet on 2016/2/16.
  */
-$(document).ready(function() {
+//$(document).ready(function() {
     var int=self.setInterval("tick()",50);
     function tick() {
         var hours, minutes, seconds,dd;
@@ -32,17 +31,17 @@ $(document).ready(function() {
         } else {
             minutes = intMinutes+",";
         }
-        if(intHours<=21&&dd!=4)
+        if(intHours>=6&&intHours<=9||intHours>=10&&intHours<=13||intHours>=14&&intHours<=21)
         {
             state1="开放中";
             state2="开放中";
-            state3="开放中";
+            //state3="开放中";
         }
         else
         {
             state1="未开放";
             state2="未开放";
-            state3="未开放"
+            //state3="未开放"
         }
         //timeString = theday+hours+minutes+seconds;
         if(intHours<=12&&intHours>=8)
@@ -63,12 +62,16 @@ $(document).ready(function() {
 
 
         computer.innerHTML = computerstate;
-        timeString = theday+hours+minutes;
+        timeString = theday+hours+minutes+seconds;
         Clock.innerHTML = timeString;
         yulan.innerHTML = state1;
         huicui.innerHTML = state2;
         tangdao.innerHTML = state3;
-        //window.setTimeout("tick();", 100);
+        window.setTimeout("tick();", 1000);
     }
     window.onload = tick();
-});
+//});
+function disappearSome(){
+    var ele=document.getElementById(abc); //给每一行设置一个ID
+    ele.style.display="none";
+}
