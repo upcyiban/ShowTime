@@ -44,12 +44,13 @@
             //state3="未开放"
         }
         //timeString = theday+hours+minutes+seconds;
+        //computer
         if(intHours<=12&&intHours>=8)
         {
             computerstate="开放中";
 
         }
-        if (intHours>=14&&intHours<=22)
+        else if (intHours>=14&&intHours<=22)
         {
             computerstate="开放中";
 
@@ -59,10 +60,100 @@
             computerstate="未开放";
 
         }
+        //library
+        //library0
+        if(intHours>=8)
+        {
+            if (intHours==8)
+            {
+                if(intMinutes>=30)
+                {
+                    library0state="开放中";
+                }
+                else
+                {
+                    library0state="未开放";
+                }
+            }
+            else if (intHours<22)
+            {
+                library0state="开放中";
+            }
+            else if(intHours==22)
+            {
+                if (intMinutes>=30)
+                {
+                    library0state="未开放";
+                }
+                else
+                {
+                    library0state="开放中";
+                }
+            }
+            else
+            {
+                library0state="未开放";
+            }
+        }
+        //library1
+        if(intHours<=22&&intHours>=8)
+        {
+            library1state="开放中";
+
+        }
+        else
+        {
+            library1state="未开放";
+
+        }
+        //library2、3
+        if(intHours<=12&&intHours>=8)
+        {
+            library2state="开放中";
+            library3state="开放中";
+        }
+        else if (intHours>=14)
+        {
+            if(intHours<17)
+            {
+                library2state="开放中";
+                library3state="开放中";
+            }
+            else if (intHours==17)
+            {
+                if(intMinutes>=30)
+                {
+                    library2state="未开放";
+                    library3state="未开放";
+                }
+                else
+                {
+                    library2state="开放中";
+                    library3state="开放中";
+                }
+            }
+        }
+        else if (intHours>=19&&intHours<=22)
+        {
+            library2state="开放中";
+            library3state="开放中";
+        }
+        else
+        {
+            library2state="未开放";
+            library3state="未开放";
+        }
 
 
         computer.innerHTML = computerstate;
-        timeString = theday+hours+minutes+seconds;
+//<<<<<<< HEAD
+//        timeString = theday+hours+minutes+seconds;
+//=======
+        library0.innerHTML = library0state;
+        library1.innerHTML = library1state;
+        library2.innerHTML = library2state;
+        library3.innerHTML = library3state;
+        timeString = theday+hours+minutes;
         Clock.innerHTML = timeString;
         yulan.innerHTML = state1;
         huicui.innerHTML = state2;
@@ -71,7 +162,5 @@
     }
     window.onload = tick();
 //});
-function disappearSome(){
     var ele=document.getElementById(abc); //给每一行设置一个ID
     ele.style.display="none";
-}

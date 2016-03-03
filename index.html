@@ -1,4 +1,4 @@
-<doctype html!>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>开放时间</title>
@@ -6,13 +6,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="keywords" content="Play-Offs Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 		<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-		<meta charset utf="8">
+		<meta charset="utf-8">
 		<!--fonts-->
 		<link href='http://fonts.useso.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
-		<!--fonts-->
-		<!--link css-->
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<!--bootstrap-->
 			<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<!--coustom css-->
@@ -28,7 +24,6 @@
         <div class="header-top">
             <nav class="navbar navbar-default">
               <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only"> </span>
@@ -37,7 +32,7 @@
                     <span class="icon-bar"> </span>
                   </button>
                     <div class="logo">
-                       <a href="index.html"><h1>开放TIME <span class="hand-log"></span><span class="hand-log"></span></h1></a>
+                       <a href="index.html"><h1>开放TIME<span class="hand-log"></span><span class="hand-log"></span></h1></a>
                     </div>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -61,8 +56,11 @@
                         <h3>校园地图：</h3>
                         <img src="" alt="" class="">
                     </div>
+                    <br />
+                    <br />
+                    <hr />
                     <div><h3>水房：</h3></div>
-                    <ul>
+                    <>
                         <li class="col-md-3 re-size1">
                             <!--<img src="images/yulan1.jpg" alt="/" class="zoom-img"/>-->
                             <img src="images/yulan2.png" alt="/" class="zoom-img"/>
@@ -74,13 +72,15 @@
                                 <button type="button"  class="btn btn-default re-clr1">开放时间</button>
                                 </div>
                                 <div id="abc" onmouseover="this.style.display = 'block';" onmouseout="this.style.display = 'none';">
-                                    <p>06:00--09:00</p>
-                                    <p>10:00--13:00</p>
-                                    <p>14:00--21:00</p>
+                                        <p>06:00--09:00</p>
+                                        <p>10:00--13:00</p>
+                                        <p>14:00--21:00</p>
                                 </div>
                                 <!--class="btn btn-default re-clr1"-->
                             </div>
                         </li>
+
+                        <!--<div class="clearfix"></div>-->
                         <li class="col-md-3 re-size1">
                             <img src="images/huicui2.png" alt="/" class="zoom-img"/>
                             <div class="grid-txt">
@@ -109,12 +109,54 @@
                         <!--</li>-->
                         <div class="clearfix"></div>
                     </ul>
-
+                    <br />
+                    <br />
+                    <hr />
                     <div><h3>图书馆：</h3></div>
-                    <ul>   </ul>
-
+                    <ul>
+                        <li class="col-md-3 re-size1">
+                            <img src="images/computer1.jpg" alt="/" class="zoom-img"/>
+                            <div class="grid-txt">
+                                <h4>图书馆</h4>
+                                <h4>开放状态：</h4>
+                                <h3 id="library0"></h3>
+                                <button type="button" class="btn btn-default re-clr1">开放时间</button>
+                            </div>
+                        </li>
+                        <li class="col-md-3 re-size1">
+                            <img src="images/computer1.jpg" alt="/" class="zoom-img"/>
+                            <div class="grid-txt">
+                                <h4>图书馆文艺书库</h4>
+                                <h4>开放状态：</h4>
+                                <h3 id="library1"></h3>
+                                <button type="button" class="btn btn-default re-clr1">开放时间</button>
+                            </div>
+                        </li>
+                        <li class="col-md-3 re-size1">
+                            <img src="images/computer1.jpg" alt="/" class="zoom-img"/>
+                            <div class="grid-txt">
+                                <h4>图书馆社科书库</h4>
+                                <h4>开放状态：</h4>
+                                <h3 id="library2"></h3>
+                                <button type="button" class="btn btn-default re-clr1">开放时间</button>
+                            </div>
+                        </li>
+                        <li class="col-md-3 re-size1">
+                            <img src="images/computer1.jpg" alt="/" class="zoom-img"/>
+                            <div class="grid-txt">
+                                <h4>图书馆科技书库</h4>
+                                <h4>开放状态：</h4>
+                                <h3 id="library3"></h3>
+                                <button type="button" class="btn btn-default re-clr1">开放时间</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <br />
+                    <br />
+                    <hr />
                     <div><h3>机房：</h3></div>
-                    <div><li class="col-md-3 re-size1">
+                    <ul>
+                        <li class="col-md-3 re-size1">
                         <img src="images/computer1.jpg" alt="/" class="zoom-img"/>
                         <div class="grid-txt">
                             <h4>图书馆电子阅览室</h4>
@@ -122,14 +164,14 @@
                             <h3 id="computer"></h3>
                             <button type="button" class="btn btn-default re-clr1">开放时间</button>
                         </div>
-                    </li></div>
-                    <ul>   </ul>
-
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-
-
+        <br />
+        <br />
+        <hr />
         <div class="footer">
             <div class="container">
 
@@ -146,4 +188,3 @@
         </div>
 	</body>
 </html>
-</doctype>
