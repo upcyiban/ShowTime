@@ -147,13 +147,13 @@
 
         computer.innerHTML = computerstate;
 //<<<<<<< HEAD
-//        timeString = theday+hours+minutes+seconds;
+        timeString = theday+hours+minutes+seconds;
 //=======
         library0.innerHTML = library0state;
         library1.innerHTML = library1state;
         library2.innerHTML = library2state;
         library3.innerHTML = library3state;
-        timeString = theday+hours+minutes;
+        //timeString = theday+hours+minutes;
         Clock.innerHTML = timeString;
         yulan.innerHTML = state1;
         huicui.innerHTML = state2;
@@ -162,5 +162,3 @@
     }
     window.onload = tick();
 //});
-    var ele=document.getElementById(abc); //给每一行设置一个ID
-    ele.style.display="none";
