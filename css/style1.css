@@ -78,18 +78,21 @@ header.fixed {
     margin: 25px 0px 0px 25px;
 }
 
-.sort_box {
-    width: 100%;
-    padding-top: 45px;
-    overflow: hidden;
-}
+
 
 .sort_list {
     padding: 10px 60px 10px 80px;
     position: relative;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    
     border-bottom: 1px solid #ddd;
+}
+.sort_box {
+
+
+    padding-top: 100px;
+    overflow:hidden;
+
 }
 
 .sort_list .num_logo {
@@ -135,4 +138,27 @@ header.fixed {
 
 .initials li img {
     width: 14px;
+}
+.project {
+    text-align: center;
+}
+.proj-bwn {
+    margin: 60px 0px 0px 0px;
+    text-align: center;
+}
+.proj-bwn a {
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    background: #777;
+    padding: 10px 15px;
+    text-decoration:none;
+    border-radius:5px;
+}
+.proj-bwn a:hover{
+    text-decoration:none;
+    background: #e45c5f;
+}
+.project {
+    padding: 80px 0px;
 }
