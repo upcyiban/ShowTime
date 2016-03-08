@@ -1,9 +1,12 @@
+/**
+ * Created by zet on 2016/2/16.
+ */
 //$(document).ready(function() {
     var int=self.setInterval("tick()",50);
     function tick() {
         var hours, minutes, seconds,dd;
         var intHours, intMinutes, intSeconds;
-        var today, theday,state1,state2,state3,computerstate,library0state,library1state,library2state,library3state;
+        var today, theday,state1,state2,state3,computerstate;
         today = new Date();
         function initArray(){
             this.length=initArray.arguments.length;
@@ -20,18 +23,13 @@
         theday =  [today.getMonth()+1]+"月"+today.getDate()+"日"+"&nbsp&nbsp&nbsp" + d[today.getDay()+1]+"&nbsp&nbsp";
         intHours = today.getHours();
         intMinutes = today.getMinutes();
-        intSeconds  = today.getSeconds();
+        seconds  = today.getSeconds();
         hours = intHours+":";
         dd = today.getDay();
         if (intMinutes < 10) {
-            minutes = "0"+intMinutes+":";
+            minutes = "0"+intMinutes+",";
         } else {
-            minutes = intMinutes+":";
-        }
-        if (intSeconds < 10) {
-            seconds = "0"+intSeconds;
-        } else {
-            seconds = intSeconds;
+            minutes = intMinutes+",";
         }
         if(intHours>=6&&intHours<=9||intHours>=10&&intHours<=13||intHours>=14&&intHours<=21)
         {
@@ -45,6 +43,7 @@
             state2="未开放";
             //state3="未开放"
         }
+        //timeString = theday+hours+minutes+seconds;
         //computer
         if(intHours<=12&&intHours>=8)
         {
