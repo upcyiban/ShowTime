@@ -7,6 +7,7 @@
         var hours, minutes, seconds,dd;
         var intHours, intMinutes, intSeconds;
         var today, theday,state1,state2,state3,computerstate;
+        var library0state,library1state,library2state,library3state;
         today = new Date();
         function initArray(){
             this.length=initArray.arguments.length;
