@@ -35,17 +35,22 @@
         if(intHours>=6&&intHours<=9||intHours>=10&&intHours<=13||intHours>=14&&intHours<=21)
         {
             state1="开放中";
-            state2="开放中";
+            //state2="开放中";
             //state3="开放中";
         }
         else
         {
             state1="未开放";
-            state2="未开放";
+            //state2="未开放";
             //state3="未开放"
         }
         //timeString = theday+hours+minutes+seconds;
         //computer
+        if(intHours>=9&&intHours<13)
+        {
+            state2="开放中"
+        }
+
         if(intHours<=12&&intHours>=8)
         {
             computerstate="开放中";
@@ -113,7 +118,7 @@
             library2state="开放中";
             library3state="开放中";
         }
-        else if (intHours>=14)
+        else if (intHours>=14 && intHours<=17)
         {
             if(intHours<17)
             {
