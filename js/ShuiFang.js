@@ -66,6 +66,8 @@
             computerstate="未开放";
 
         }
+
+
         //library
         //library0
         if(intHours>=8)
@@ -102,47 +104,53 @@
             }
         }
         //library1
-        if(intHours<=22&&intHours>=8)
+        if(intHours<22 && intHours>=8)
         {
             library1state="开放中";
-
         }
         else
         {
             library1state="未开放";
-
         }
         //library2、3
-        if(intHours<=12&&intHours>=8)
+        if(intHours >=8)
         {
-            library2state="开放中";
-            library3state="开放中";
-        }
-        else if (intHours>=14 && intHours<=17)
-        {
-            if(intHours<17)
+            if(intHours < 12)
             {
                 library2state="开放中";
                 library3state="开放中";
             }
-            else if (intHours==17)
+            else if(intHours >=14)
             {
-                if(intMinutes>=30)
-                {
-                    library2state="未开放";
-                    library3state="未开放";
-                }
-                else
+                if(intHours < 17)
                 {
                     library2state="开放中";
                     library3state="开放中";
                 }
+                else if(intHours == 17)
+                {
+                    if(intMinutes >=30)
+                    {
+                        library2state="未开放";
+                        library3state="未开放";
+                    }
+                    else
+                    {
+                        library2state="开放中";
+                        library3state="开放中";
+                    }
+                }
+                else if(intHours >=19 && intHours <22)
+                {
+                    library2state="开放中";
+                    library3state="开放中";
+                }
+                else
+                {
+                    library2state="未开放";
+                    library3state="未开放";
+                }
             }
-        }
-        else if (intHours>=19&&intHours<=22)
-        {
-            library2state="开放中";
-            library3state="开放中";
         }
         else
         {
