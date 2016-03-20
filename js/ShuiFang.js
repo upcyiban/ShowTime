@@ -41,22 +41,47 @@
         else
         {
             state1="未开放";
-            //state2="未开放";
-            //state3="未开放"
-        }
-        //timeString = theday+hours+minutes+seconds;
-        //computer
-        if(intHours>=9&&intHours<13)
-        {
-            state2="开放中"
-        }
 
+        }
+       //huicui
+        if (intHours==6&&intMinutes>=30)
+        {
+            state2="已开放";
+        }
+        else if (intHours==7)
+        {
+            state2="已开放";
+        }
+        else if (intHours==10&&intMinutes>=30)
+        {
+            state2="已开放";
+        }
+        else if (intHours>=11 &&intHours<13)
+        {
+            state2="已开放";
+        }
+        else if (intHours==16&&intMinutes>=30)
+        {
+            state2="已开放";
+        }
+        else if (intHours>=17 &&intMinutes<19)
+        {
+            state2="已开放";
+        }
+        else if (intHours==21)
+        {
+            state2="已开放";
+        }
+        else
+        {
+            state2="未开放";
+        }
+        //tushuguanyuelanshi
         if(intHours<=12&&intHours>=8)
         {
             computerstate="开放中";
-
         }
-        else if (intHours>=14&&intHours<=22)
+        else if (intHours>=14&&intHours<22)
         {
             computerstate="开放中";
 
