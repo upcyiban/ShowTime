@@ -27,6 +27,7 @@ function tick() {
     intHours = today.getHours();
 
     intMinutes = today.getMinutes();
+   
     seconds = today.getSeconds();
     hours = intHours + ":";
     dd = today.getDay();
@@ -35,7 +36,7 @@ function tick() {
     } else {
         minutes = intMinutes + ":";
     }
-    if (intHours >= 6 && intHours <= 9 || intHours >= 10 && intHours <= 13 || intHours >= 14 && intHours <= 21) {
+    if (intHours >= 6 && intHours < 9 || intHours >= 10 && intHours < 13 || intHours >= 14 && intHours < 21) {
         state1 = "开放中";
         //state2="开放中";
         //state3="开放中";
@@ -46,25 +47,25 @@ function tick() {
     }
     //huicui
     if (intHours == 6 && intMinutes >= 30) {
-        state2 = "已开放";
+        state2 = "开放中";
     }
     else if (intHours == 7) {
-        state2 = "已开放";
+        state2 = "开放中";
     }
     else if (intHours == 10 && intMinutes >= 30) {
-        state2 = "已开放";
+        state2 = "开放中";
     }
     else if (intHours >= 11 && intHours < 13) {
-        state2 = "已开放";
+        state2 = "开放中";
     }
     else if (intHours == 16 && intMinutes >= 30) {
-        state2 = "已开放";
+        state2 = "开放中";
     }
     else if (intHours >= 17 && intMinutes < 19) {
-        state2 = "已开放";
+        state2 = "开放中";
     }
     else if (intHours == 21) {
-        state2 = "已开放";
+        state2 = "开放中";
     }
     else {
         state2 = "未开放";
@@ -85,8 +86,8 @@ function tick() {
 
     //library
     //library0
-    if (intHours >= 8) {
-        if (intHours == 8) {
+    if (intHours >= 6) {
+        if (intHours == 6) {
             if (intMinutes >= 30) {
                 library0state = "开放中";
             }
