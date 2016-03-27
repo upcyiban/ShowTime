@@ -27,7 +27,7 @@ function tick() {
     intHours = today.getHours();
 
     intMinutes = today.getMinutes();
-   
+
     seconds = today.getSeconds();
     hours = intHours + ":";
     dd = today.getDay();
@@ -160,9 +160,7 @@ function tick() {
 
 
     computer.innerHTML = computerstate;
-//<<<<<<< HEAD
     timeString = theday + hours + minutes + seconds;
-//=======
     library0.innerHTML = library0state;
     library1.innerHTML = library1state;
     library2.innerHTML = library2state;
