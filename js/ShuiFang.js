@@ -4,9 +4,9 @@
 //$(document).ready(function() {
 var int = self.setInterval("tick()", 50);
 function tick() {
-    var hours, minutes, seconds, dd;
-    var intHours, intMinutes, intSeconds;
-    var today, theday, state1, state2, state3, computerstate;
+    var hours, minutes, seconds;
+    var intHours, intMinutes;
+    var today, theday, state1, state2,  computer0state;
     var library0state, library1state, library2state, library3state;
     today = new Date();
     function initArray() {
@@ -30,7 +30,7 @@ function tick() {
 
     seconds = today.getSeconds();
     hours = intHours + ":";
-    dd = today.getDay();
+    //dd = today.getDay();
     if (intMinutes < 10) {
         minutes = "0" + intMinutes + ":";
     } else {
@@ -72,14 +72,14 @@ function tick() {
     }
     //tushuguanyuelanshi
     if (intHours <= 12 && intHours >= 8) {
-        computerstate = "开放中";
+        computer0state = "开放中";
     }
     else if (intHours >= 14 && intHours < 22) {
-        computerstate = "开放中";
+        computer0state = "开放中";
 
     }
     else {
-        computerstate = "未开放";
+        computer0state = "未开放";
 
     }
 
@@ -158,9 +158,8 @@ function tick() {
         library3state = "未开放";
     }
 
-
-    computer.innerHTML = computerstate;
     timeString = theday + hours + minutes + seconds;
+    computer.innerHTML = computer0state;
     library0.innerHTML = library0state;
     library1.innerHTML = library1state;
     library2.innerHTML = library2state;
@@ -169,7 +168,7 @@ function tick() {
     Clock.innerHTML = timeString;
     yulan.innerHTML = state1;
     huicui.innerHTML = state2;
-    tangdao.innerHTML = state3;
+    //tangdao.innerHTML = state3;
     window.setTimeout("tick();", 1000);
 }
 window.onload = tick();

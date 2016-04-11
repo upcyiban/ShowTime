@@ -42,7 +42,7 @@ body {
 }
 
 .logo a h1 span.hand-log {
-    background: url(../images/log-soc.png) -10px 0px;
+
     width: 17px;
     height: 15px;
     background-size: 100px;
@@ -534,7 +534,7 @@ input.mail2 {
 }
 
 .social ul li a {
-    background: url(../images/log-soc.png);
+
     width: 32px;
     height: 32px;
     display: inline-block;
