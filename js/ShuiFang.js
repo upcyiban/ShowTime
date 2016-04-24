@@ -61,7 +61,7 @@ function tick() {
     else if (intHours == 16 && intMinutes >= 30) {
         state2 = "开放中";
     }
-    else if (intHours >= 17 && intMinutes < 19) {
+    else if (intHours >= 17 && intHours < 19) {
         state2 = "开放中";
     }
     else if (intHours == 21) {
