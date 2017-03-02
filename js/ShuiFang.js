@@ -36,14 +36,34 @@ function tick() {
     } else {
         minutes = intMinutes + ":";
     }
-    if (intHours >= 6 && intHours < 9 || intHours >= 10 && intHours < 13 || intHours >= 14 && intHours < 21) {
+        if (seconds < 10) {
+        seconds = "0" + seconds;
+    } else {
+        seconds= seconds;
+    }
+ if (intHours == 6 && intMinutes >= 30) {
         state1 = "开放中";
-        //state2="开放中";
-        //state3="开放中";
+    }
+    else if (intHours == 7) {
+        state1 = "开放中";
+    }
+    else if (intHours == 10 && intMinutes >= 30) {
+        state1 = "开放中";
+    }
+    else if (intHours >= 11 && intHours < 13) {
+        state1 = "开放中";
+    }
+    else if (intHours == 16 && intMinutes >= 30) {
+        state1 = "开放中";
+    }
+    else if (intHours >= 17 && intHours < 19) {
+        state1 = "开放中";
+    }
+    else if (intHours == 21) {
+        state1 = "开放中";
     }
     else {
         state1 = "未开放";
-
     }
     //huicui
     if (intHours == 6 && intMinutes >= 30) {
